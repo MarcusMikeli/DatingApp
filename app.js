@@ -2,9 +2,18 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+require('dotenv/config');
 
 const userRoutes = require('./API/Routes/users');
 const matchRoutes = require('./API/Routes/match')
+
+mongoose.connect(
+    process.env.DB_CONNECTION,
+    { useNewUrlParser: true },
+    () => console.log('Connected to DB!'));
+
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));

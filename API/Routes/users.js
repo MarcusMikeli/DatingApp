@@ -1,6 +1,9 @@
 const express = require('express');
 // FORKLARING, VIDEO 3 - 1MIN
 const router = express.Router();
+const mongoose = require('mongoose');
+
+const User = require('../Models/user');
 
 router.get('/', (req, res, next) => {
     res.status(200).json({
@@ -9,10 +12,15 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-    const user = {
+    const user = new User({
+        _id: new mongoose.Types.ObjectId(),
         name: req.body.name,
         price: req.body.price
-    };
+    });
+    user.save().then(result => {
+        console.log(result);
+    })
+    .catch(err => console.log(err));
     res.status(201).json({
         message: 'Handling POST requests to /users',
         createdUser: user
@@ -35,13 +43,13 @@ router.get('/:userId', (req, res, next) => {
 
 router.patch('/:userId', (req, res, next) => {
     res.status(200).json({
-        message: 'Updated product!'
+        message: 'Updated user!'
     });
 });
 
 router.delete('/:userId', (req, res, next) => {
     res.status(200).json({
-        message: 'Deleted product!'
+        message: 'Deleted user!'
     });
 });
 
