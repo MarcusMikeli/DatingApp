@@ -7,7 +7,8 @@ const mongoose = require('mongoose');
 require('dotenv/config');
 
 const userRoutes = require('./API/Routes/users');
-const matchRoutes = require('./API/Routes/match')
+const matchRoutes = require('./API/Routes/match');
+const userSignRoutes = require("./API/Routes/userSign");
 
 mongoose.connect(
     process.env.DB_CONNECTION,
@@ -17,6 +18,7 @@ mongoose.connect(
 
 
 app.use(morgan('dev'));
+app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
@@ -33,8 +35,9 @@ app.use((req, res, next) => {
 });
 
 // Middlewear
-app.use('/users', userRoutes)
-app.use('/match', matchRoutes)
+app.use('/users', userRoutes);
+app.use('/match', matchRoutes);
+app.use('/userSign', userSignRoutes);
 
 app.use((req, res, next) => {
     const error = new Error('Not found');
