@@ -2,9 +2,11 @@ const express = require('express');
 // FORKLARING, VIDEO 3 - 1MIN
 const router = express.Router();
 const mongoose = require('mongoose');
+// const multer = require('multer');
+// const upload = multer({dest: '/uploads/'});
 
 const User = require('../Models/user');
-const { response } = require('../../app');
+// const { response } = require('../../app');
 
 router.get('/', (req, res, next) => {
     User.find()
@@ -41,7 +43,7 @@ router.get('/', (req, res, next) => {
     });
 });
 
-router.post('/', (req, res, next) => {
+router.post('/', upload.single(), (req, res, next) => {
     const user = new User ({
         _id: new mongoose.Types.ObjectId(),
         name: req.body.name,
