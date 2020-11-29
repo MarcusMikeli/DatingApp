@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const multer = require('multer');
+const checkAuth = require('../middleware/check-auth');
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
@@ -70,8 +71,7 @@ router.get('/', (req, res, next) => {
     });
 });
 
-router.post('/', upload.single('userImage'), (req, res, next) => {
-    console.log(req.file);
+router.post('/', checkAuth, upload.single('userImage'), (req, res, next) => {
     const user = new User ({
         _id: new mongoose.Types.ObjectId(),
         name: req.body.name,
@@ -128,7 +128,7 @@ router.get('/:userId', (req, res, next) => {
     })
 });
 
-router.patch('/:userId', (req, res, next) => {
+router.patch('/:userId', checkAuth, (req, res, next) => {
     const id = req.params.userId;
     const updateOps = {};
     for (const ops of req.body) {
@@ -153,7 +153,7 @@ router.patch('/:userId', (req, res, next) => {
     });
 });
 
-router.delete('/:userId', (req, res, next) => {
+router.delete('/:userId', checkAuth, (req, res, next) => {
     const id = req.params.userId;
     User.remove({_id: id})
     .exec()
