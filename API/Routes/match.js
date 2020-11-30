@@ -6,10 +6,36 @@ const checkAuth = require('../middleware/check-auth');
 
 const Match = require('../Models/match');
 const User = require('../Models/user');
-const MatchController = require('../Controllers/match');
+//const MatchController = require('../Controllers/match');
 
 
-router.get('/', checkAuth, MatchController.match_get_all);
+router.get('/', checkAuth, (req, res, next) => {
+    Match.find()
+    .select('match quantity _id')
+    .populate('match', 'name')
+    .exec()
+    .then(docs => {
+        res.status(200).json({
+            count: docs.length,
+            matchs: docs.map(doc =>{
+                return {
+                    _id: doc._id,
+                    match: doc.match,
+                    quantity: doc.quantity,
+                    request: {
+                        type: 'GET',
+                        url: 'http://localhost:3000/match/' + doc._id
+                    }
+                };
+            })
+        });
+    })
+    .catch(err => {
+        res.status(500).json({
+            error: err
+        });
+    });
+});
 
 router.post('/', checkAuth, (req, res, next) => {
     User.findById(req.body.userId)

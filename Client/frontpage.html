@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinderApp</title>
+    <link rel="stylesheet" href="frontpage.css">
+    <script src="frontpage.js"></script>
+</head>
+<body>
+    <form action="action_page.php" method="post">
+        <!--Link til henvisning: https://www.w3schools.com/howto/howto_css_login_form.asp -->
+        <div class="imgcontainer">
+            <!--<img src="https://www.gamereactor.dk/media/49/_2644973b.jpg" alt="Avatar" class="avatar">-->
+            <!--Indsæt her et billede med 'img src'-->
+        </div>
+
+        <div class="container">
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter password" name="psw" required>
+
+            <button id="submitbtn" type="submit">Login</button>
+            <button id="redirect">Create account</button>
+            
+
+            <script type="text/javascript">
+                document.getElementById("redirect").onclick = function() {
+                    location.href = "../createAcc/createacc.html";
+            };
+            /* DET NEDENSTÅENDE SKAL FIXES SÅ MAN KUN BLIVER HENVIST TIL DEN SIDE HVIS LOGIN ER TRUE
+                if (login === true) {
+                document.getElementById("submitbtn").onclick = function() {
+                    location.href = "../mainUser/user.html"
+                } else {
+                    return 'login failed'
+                } 
+            }; */
+            </script>
+
+        </div>
+    </form>
+
+    
+</body>
+</html>
