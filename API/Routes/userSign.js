@@ -8,6 +8,7 @@ const jwt = require('jsonwebtoken');
 const userSign = require('../Models/userSign');
 
 router.post('/signup', (req, res, next) => {
+    console.log(req.body);
         userSign.find({email: req.body.email})
         .exec()
         .then(signUser => {
@@ -48,6 +49,7 @@ router.post('/signup', (req, res, next) => {
 });
 
 router.post('/login', (req, res, next) => {
+    console.log(req.body)
     userSign.find({ email: req.body.email })
     .exec()
     .then(signUser => {

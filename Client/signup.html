@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ved create account skal du føres ind på en side der lader dig tilføje billeder, vælge password, email osv. -->
+    <!--Link til henvisning: https://www.w3schools.com/howto/howto_css_signup_form.asp -->
+    <!--Link til henvisning af dato form: https://www.w3schools.com/html/html_form_input_types.asp -->
+        
+    <p id="validationTextFirstName" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+    
+    <p id="validationTextLastName" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+        
+	<p id="validationTextEmail" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+        
+    <p id="validationTextPsw" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+    
+    <p id="validationTextPswRepeat" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+        
+    <p id="validationTextBirthday" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+    
+    <p id="validationTextGender" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+
+    <form style="border:1px solid #ccc" name="userContact" onsubmit="return validateNewUser()" method="get">
+        <div class="container">
+            <h1>Sign up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+
+            <img src="https://i.stack.imgur.com/YQu5k.png" id="profilepic"> <br><br>
+
+            <label for="name"><b>First name</b></label>
+            <input id="first_name" type="text" placeholder="Enter first name" name="name">
+
+            <label for="name"><b>Last name</b></label>
+            <input id="last_name" type="text" placeholder="Enter last name" name="name">
+
+            <label for="email"><b>Email</b></label>
+            <input id="user_email" type="text" placeholder="Enter email" name="email">
+
+            <label for="gender"><b>Choose your gender</b><br></label>
+            <input type="radio" class="user_gender" name="gender" value="male" checked> Male<br>
+            <input type="radio" class="user_gender" name="gender" value="female"> Female<br>
+            <input type="radio" class="user_gender" name="gender" value="other"> Other<br><br>
+
+            <label for="birthday"><b>Choose your birthday</b><br></label>
+            <input id="user_birthday" type="date" name="birthday"><br>
+
+            <label for="psw"><b>Password</b></label>
+            <input id="user_psw" type="password" placeholder="Enter password" name="psw">
+        </div>
+
+        <div class="clearfix">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button id="submitbtn" type="button" class="signupbtn">Sign up</button>
+        </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="signup.js"></script>
+</body>
+</html>
