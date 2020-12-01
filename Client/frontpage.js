@@ -1,3 +1,9 @@
+let createbtn =document.getElementById("redirect");
+createbtn.addEventListener('click', (event) => {
+    location.href = "./signup.html";
+})
+    
+
 let button = document.getElementById('submitbtn');
 button.addEventListener('click', (event) => {
 event.preventDefault()  

@@ -97,7 +97,7 @@ router.post('/login', (req, res, next) => {
 
 // DENNE KAN DELETE BRUGER
 router.delete('/:signUserId', (req, res, next) => {
-    userSign.remove({_id: req.params.signUserId})
+    userSign.findByIdAndDelete(eq.params.signUserId)
     .exec()
     .then(result => {
         res.status(200).json({

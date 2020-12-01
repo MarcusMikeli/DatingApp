@@ -19,18 +19,17 @@ function showUser() {
     console.log(user);
 }
 
-/*let button = document.getElementById('deletebtn');
+let button = document.getElementById('deletebtn');
 button.addEventListener('click', (event) => {
 event.preventDefault()  
     deleteButton()  
 });
 
 function deleteButton() {
-    let user = showUser;
-    axios.delete('http://localhost:3000/userSign/delete/', { user: user, id: _id })
+    axios.delete('http://localhost:3000/userSign/delete/', { user: showUser })
     .then(response => {
         console.log(response)
         window.location = 'frontpage.html';
     })
-}*/
+}
 
