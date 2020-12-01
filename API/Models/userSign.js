@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 
 const signingSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
+    firstName: { type: String },
+    lastName: { type: String },
+    gender: { type: String },
+    birthday: { type: Date },
     email: { 
         type: String, 
         required: true, 

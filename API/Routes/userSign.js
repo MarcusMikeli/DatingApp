@@ -26,7 +26,11 @@ router.post('/signup', (req, res, next) => {
                     const signUser = new userSign({
                         _id: new mongoose.Types.ObjectId(), 
                         email: req.body.email,
-                        password: hash
+                        password: hash,
+                        gender: req.body.gender,
+                        firstName: req.body.firstName,
+                        lastName: req.body.lastName,
+                        birthday: req.body.birthday
                         });
                         signUser
                         .save()
@@ -73,7 +77,7 @@ router.post('/login', (req, res, next) => {
                     expiresIn: "1h"
                 });
                 return res.status(200).json({
-                    message: 'Auth successful',
+                    message: signUser,
                     token: token
                 });
             }

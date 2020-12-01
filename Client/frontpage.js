@@ -1,5 +1,8 @@
 let button = document.getElementById('submitbtn');
-button.addEventListener('click', () => loginButton());
+button.addEventListener('click', (event) => {
+event.preventDefault()  
+    loginButton()  
+});
 
 function loginButton() {
     let email = document.getElementById('idEmail');
@@ -7,5 +10,7 @@ function loginButton() {
     axios.post('http://localhost:3000/userSign/login/', { email: email.value, password: psw.value })
     .then(response => {
         console.log(response)
+        localStorage.setItem('activeUser', JSON.stringify(response.data))
+        window.location = 'user.html';
     })
 }

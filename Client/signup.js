@@ -13,6 +13,6 @@ function loginButton() {
         firstName: firstName.value, lastName: lastName.value, birthday: birthday.value, gender: swagbutton})
     .then(response => {
         console.log(response)
-        window.location = 'frontpage.html';
+        window.location = 'user.html';
     })
 } 

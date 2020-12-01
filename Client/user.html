@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Lav 'div' til højre side hvor du har muligheden for at slette, opdatere osv. brugeren -->
+    <!-- Info til subpages = https://stackoverflow.com/questions/24543101/how-to-create-a-subpage-on-a-website -->
+    <h1 id=overskrift>Welcome user</h1>
+
+    <div id=userinterface>
+        <img src="https://i.stack.imgur.com/YQu5k.png" id="profilepic"> <br><br>
+        <label for="name"><b>Full name</b></label> <br>
+        <label id="name" for="name">Marcus Mikeli Olsen</label> <br><br>
+
+        <label for="name"><b>Gender</b></label> <br>
+        <label id="gender" for="name">Male</label> <br><br>
+
+        <label for="name"><b>Email</b></label> <br>
+        <label id="email" for="name">Mikelimarcusolsen@gmail.com</label> <br><br>
+
+        <label for="name"><b>Age</b></label> <br>
+        <label id="birthday" for="name">20</label> <br><br>
+
+        <label for="name"><b>Your bio</b></label> <br>
+        <textarea type="text" rows="5" cols="30" id="additional_info" value="" placeholder="Your feedback"></textarea>
+        <br/>
+
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="user.js"></script>
+</body>
+</html>
