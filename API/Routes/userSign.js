@@ -30,7 +30,8 @@ router.post('/signup', (req, res, next) => {
                         gender: req.body.gender,
                         firstName: req.body.firstName,
                         lastName: req.body.lastName,
-                        birthday: req.body.birthday
+                        birthday: req.body.birthday,
+                        //bio: req.body.bio
                         });
                         signUser
                         .save()

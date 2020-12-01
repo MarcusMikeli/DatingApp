@@ -12,8 +12,11 @@
 
     <div id=userinterface>
         <img src="https://i.stack.imgur.com/YQu5k.png" id="profilepic"> <br><br>
-        <label for="name"><b>Full name</b></label> <br>
-        <label id="name" for="name">Marcus Mikeli Olsen</label> <br><br>
+        <label for="name"><b>First name</b></label> <br>
+        <label id="firstName" for="name">Marcus Mikeli</label> <br><br>
+
+        <label for="name"><b>Last name</b></label> <br>
+        <label id="lastName" for="name">Olsen</label> <br><br>
 
         <label for="name"><b>Gender</b></label> <br>
         <label id="gender" for="name">Male</label> <br><br>
@@ -21,12 +24,15 @@
         <label for="name"><b>Email</b></label> <br>
         <label id="email" for="name">Mikelimarcusolsen@gmail.com</label> <br><br>
 
-        <label for="name"><b>Age</b></label> <br>
+        <label for="name"><b>birthday</b></label> <br>
         <label id="birthday" for="name">20</label> <br><br>
 
         <label for="name"><b>Your bio</b></label> <br>
-        <textarea type="text" rows="5" cols="30" id="additional_info" value="" placeholder="Your feedback"></textarea>
+        <textarea id="bio" type="text" rows="5" cols="30" value="" placeholder="Your bio"></textarea>
         <br/>
+
+        <button id="deletebtn" type="button" class="deletebtn">Delete user</button>
+        <button id="submitbtn" type="button" class="editbtn">Update user</button>
 
     </div>
     
