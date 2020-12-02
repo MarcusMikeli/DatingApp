@@ -26,10 +26,24 @@ event.preventDefault()
 });
 
 function deleteButton() {
-    axios.delete('http://localhost:3000/userSign/delete/', { user: showUser })
+    let user = JSON.parse(localStorage.getItem('activeUser'));
+    axios.delete('http://localhost:3000/userSign/' + user.message[0]._id)
     .then(response => {
         console.log(response)
         window.location = 'frontpage.html';
+    })
+}
+
+let logoutButton = document.getElementById('logoutbtn');
+logoutButton.addEventListener('click', (event) => {
+event.preventDefault()  
+    deleteButton()  
+});
+
+function logout() {
+    axios.get('http://localhost:3000/userSign/logout')
+    .then(respone => {
+        console.log(response)
     })
 }
 
