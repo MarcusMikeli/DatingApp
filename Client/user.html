@@ -13,27 +13,28 @@
     <div id=userinterface>
         <img src="https://i.stack.imgur.com/YQu5k.png" id="profilepic"> <br><br>
         <label for="name"><b>First name</b></label> <br>
-        <label id="firstName" for="name">Marcus Mikeli</label> <br><br>
+        <label id="firstName" for="name">You are logged out</label> <br><br>
 
         <label for="name"><b>Last name</b></label> <br>
-        <label id="lastName" for="name">Olsen</label> <br><br>
+        <label id="lastName" for="name">You are logged out</label> <br><br>
 
         <label for="name"><b>Gender</b></label> <br>
-        <label id="gender" for="name">Male</label> <br><br>
+        <label id="gender" for="name">You are logged out</label> <br><br>
 
         <label for="name"><b>Email</b></label> <br>
-        <label id="email" for="name">Mikelimarcusolsen@gmail.com</label> <br><br>
+        <label id="email" for="name">You are logged out</label> <br><br>
 
         <label for="name"><b>birthday</b></label> <br>
-        <label id="birthday" for="name">20</label> <br><br>
+        <label id="birthday" type="date" for="name">You are logged out</label> <br><br>
 
         <label for="name"><b>Your bio</b></label> <br>
         <textarea id="bio" type="text" rows="5" cols="30" value="" placeholder="Your bio"></textarea>
         <br/>
 
         <button id="deletebtn" type="button" class="deletebtn">Delete user</button>
-        <button id="submitbtn" type="button" class="editbtn">Update user</button>
-        <button id="logoutbtn" type="button" class="logoutbtn">Logout user</button>
+        <button id="editbtn" type="button" class="editbtn">Update user</button>
+        <button id="logoutbtn" type="button" class="logoutbtn">
+            <a href="/logout"></a>Logout user</button>
 
     </div>
     

@@ -18,11 +18,13 @@ router.post('/signup', (req, res, next) => {
                 });
             } else {
                 bcrypt.hash(req.body.password, 10, (err, hash) => {
+                    console.log('21');
                     if (err) {
                         return res.status(500).json({
                             error: err
                         });
                     } else {
+                        console.log('27')
                     const signUser = new userSign({
                         _id: new mongoose.Types.ObjectId(), 
                         email: req.body.email,
@@ -33,6 +35,7 @@ router.post('/signup', (req, res, next) => {
                         birthday: req.body.birthday,
                         //bio: req.body.bio
                         });
+                        console.log('38')
                         signUser
                         .save()
                         .then(result =>{
@@ -112,10 +115,26 @@ router.delete('/:signUserId', (req, res, next) => {
     });
 });
 
-router.get('/logout', (req, res, next) => {
-    req.logout();
-    req.session = null;
-    res.redirect('/frontpage.html')
+router.patch('/:id', async (req, res, next) => {
+    try {
+        const id = req.params.id;
+        console.log(req.params.id)
+        const updates = req.body;
+        const options = {new: true}
+        const result = await userSign.findByIdAndUpdate(id, updates, options);
+        res.send(result);
+        console.log('125');
+    } catch (error) {
+        console.log(error.message);
+        console.log('128')
+    }
 })
+
+/*router.put("/update", (req, res) => {
+    userSign.findByIdAndUpdate({id: req.user._id}, req.body)
+    .then(function(){
+        res.send("Succes");
+    })
+});*/
 
 module.exports = router;

@@ -1,6 +1,7 @@
 window.onload = function() {
     showUser();
 }
+
 function showUser() {
     let firstName = document.getElementById('firstName');
     let lastName = document.getElementById('lastName');
@@ -19,6 +20,7 @@ function showUser() {
     console.log(user);
 }
 
+
 let button = document.getElementById('deletebtn');
 button.addEventListener('click', (event) => {
 event.preventDefault()  
@@ -34,16 +36,20 @@ function deleteButton() {
     })
 }
 
+let editButton = document.getElementById('editbtn');
+editButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    location.href = 'updateuser.html'
+})
+
+// Man kunne clear local storage i browseren da API'et er stateless
 let logoutButton = document.getElementById('logoutbtn');
 logoutButton.addEventListener('click', (event) => {
 event.preventDefault()  
-    deleteButton()  
+    logout();
+    window.location = "frontpage.html"
 });
 
 function logout() {
-    axios.get('http://localhost:3000/userSign/logout')
-    .then(respone => {
-        console.log(response)
-    })
-}
-
+    localStorage.removeItem('activeUser');
+};
