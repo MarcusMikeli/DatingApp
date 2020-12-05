@@ -1,0 +1,17 @@
+#overskrift {
+    text-align: center;
+}
+
+#userinterface {
+    float:left;
+    width: 49%;
+    border: 2px solid black;
+    text-align: center;
+}
+
+#matchdiv {
+    float: right;
+    width: 49%;
+    border: 2px solid black;
+    text-align: center;
+}

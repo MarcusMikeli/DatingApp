@@ -23,14 +23,18 @@ function update() {
     let firstName = document.getElementById('first_name');
     let lastName = document.getElementById('last_name');
     let email = document.getElementById('user_email');
+    let birthday = document.getElementById('user_birthday');
+    let gender = document.querySelector('input[name="gender"]:checked');
     let user = JSON.parse(localStorage.getItem('activeUser'));
-    axios.patch('http://localhost:3000/userSign/' + user.message[0]._id, 
+    axios.patch('http://localhost:3000/userSign/' + user._id, 
         { email: email.value,  
         firstName: firstName.value, 
-        lastName: lastName.value })
+        lastName: lastName.value,
+        birthday: birthday.value,
+        gender: gender.value })
         .then(response => {
             localStorage.setItem('activeUser', JSON.stringify(response.data))
             console.log(response);
-            //window.location='user.html'
+            window.location='user.html'
         })
 } 

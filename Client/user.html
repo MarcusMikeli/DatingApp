@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="user.css">
+    <title>User</title>
 </head>
 <body>
     <!-- Lav 'div' til højre side hvor du har muligheden for at slette, opdatere osv. brugeren -->
     <!-- Info til subpages = https://stackoverflow.com/questions/24543101/how-to-create-a-subpage-on-a-website -->
-    <h1 id=overskrift>Welcome user</h1>
+    <h1 id=overskrift>Welcome</h1>
 
-    <div id=userinterface>
+    <div id="userinterface">
         <img src="https://i.stack.imgur.com/YQu5k.png" id="profilepic"> <br><br>
         <label for="name"><b>First name</b></label> <br>
         <label id="firstName" for="name">You are logged out</label> <br><br>
@@ -24,18 +25,39 @@
         <label for="name"><b>Email</b></label> <br>
         <label id="email" for="name">You are logged out</label> <br><br>
 
-        <label for="name"><b>birthday</b></label> <br>
-        <label id="birthday" type="date" for="name">You are logged out</label> <br><br>
+        <label for="name"><b>Age</b></label> <br>
+        <label id="birthday" type="number" for="name">You are logged out</label> <br><br>
 
-        <label for="name"><b>Your bio</b></label> <br>
+        <!--<label for="name"><b>Your bio</b></label> <br>
         <textarea id="bio" type="text" rows="5" cols="30" value="" placeholder="Your bio"></textarea>
-        <br/>
+        <br/>-->
 
         <button id="deletebtn" type="button" class="deletebtn">Delete user</button>
         <button id="editbtn" type="button" class="editbtn">Update user</button>
         <button id="logoutbtn" type="button" class="logoutbtn">
             <a href="/logout"></a>Logout user</button>
 
+    </div>
+
+    <div id="matchdiv">
+        <img src="https://i.stack.imgur.com/YQu5k.png" id="matchpic"><br><br>
+        <label for="name"><b>First name</b></label> <br>
+        <label id="match_firstName" for="name">Ingen data endnu</label> <br><br>
+
+        <label for="name"><b>Last name</b></label> <br>
+        <label id="match_lastName" for="name">Ingen data endnu</label> <br><br>
+
+        <label for="name"><b>Gender</b></label> <br>
+        <label id="match_gender" for="name">Ingen data endnu</label> <br><br>
+
+        <label for="name"><b>Email</b></label> <br>
+        <label id="match_email" for="name">Ingen data endnu</label> <br><br>
+
+        <label for="name"><b>birthday</b></label> <br>
+        <label id="match_birthday" type="number" for="name">Ingen data endnu</label> <br><br>
+
+        <button id="likebtn" type="button" class="likebtn">Like</button>
+        <button id="dislikebtn" type="button" class="dislikebtn">Dislike</button>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

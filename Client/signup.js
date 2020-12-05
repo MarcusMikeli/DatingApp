@@ -9,12 +9,13 @@ function signupButton() {
     let birthday = document.getElementById('user_birthday');
     let swagbutton = document.querySelector('input[name="gender"]:checked').value;
     //let bio = document.querySelector('input[id="bio"]');
-    console.log(swagbutton);
+    console.log(signupButton);
 
     axios.post('http://localhost:3000/userSign/signup', { email: email.value, password: psw.value, 
         firstName: firstName.value, lastName: lastName.value, birthday: birthday.value, gender: swagbutton, /*bio: bio.value*/})
     .then(response => {
         console.log(response)
+        localStorage.setItem('activeUser', JSON.stringify(response.data.message))
         window.location = 'user.html';
     })
 } 

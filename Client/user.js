@@ -11,13 +11,13 @@ function showUser() {
     // let bio = document.getElementById('bio');
 
     let user = JSON.parse(localStorage.getItem('activeUser'));
-    firstName.innerHTML = user.message[0].firstName;
-    lastName.innerHTML = user.message[0].lastName;
-    email.innerHTML = user.message[0].email;
-    birthday.innerHTML = user.message[0].birthday;
-    gender.innerHTML = user.message[0].gender;
+    firstName.innerHTML = user.firstName;
+    lastName.innerHTML = user.lastName;
+    email.innerHTML = user.email;
+    birthday.innerHTML = user.birthday;
+    gender.innerHTML = user.gender;
     // bio.innerHTML = user.message[0].bio;
-    console.log(user);
+    console.log(showUser);
 }
 
 
@@ -29,9 +29,10 @@ event.preventDefault()
 
 function deleteButton() {
     let user = JSON.parse(localStorage.getItem('activeUser'));
-    axios.delete('http://localhost:3000/userSign/' + user.message[0]._id)
+    axios.delete('http://localhost:3000/userSign/' + user._id)
     .then(response => {
         console.log(response)
+        localStorage.removeItem('activeUser');
         window.location = 'frontpage.html';
     })
 }
