@@ -6,9 +6,9 @@ const mongoose = require('mongoose');
 
 require('dotenv/config');
 
-const userRoutes = require('./API/Routes/users');
-const matchRoutes = require('./API/Routes/match');
-const userSignRoutes = require("./API/Routes/userSign");
+const userRoutes = require('./Routes/users');
+const matchRoutes = require('./Routes/match');
+const userSignRoutes = require("./Routes/userSign");
 
 mongoose.connect(
     process.env.DB_CONNECTION,
@@ -34,7 +34,7 @@ app.use((req, res, next) => {
     next();
 });
 
-// Middlewear
+// Middleweare
 app.use('/users', userRoutes);
 app.use('/match', matchRoutes);
 app.use('/userSign', userSignRoutes);

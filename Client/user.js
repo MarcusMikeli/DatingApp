@@ -54,3 +54,4 @@ event.preventDefault()
 function logout() {
     localStorage.removeItem('activeUser');
 };
+

@@ -130,11 +130,42 @@ router.patch('/:id', async (req, res, next) => {
     }
 })
 
-/*router.put("/update", (req, res) => {
-    userSign.findByIdAndUpdate({id: req.user._id}, req.body)
-    .then(function(){
-        res.send("Succes");
+// SKAF ALLE USERS
+router.get('/', (req, res, next) => {
+    userSign.find()
+    .select('firstName lastName gender age')
+    .exec().
+    then(docs => {
+        const response = {
+            count: docs.length,
+            users: docs.map(doc => {
+                return {
+                    firstName: doc.firstName,
+                    lastName: doc.lastName,
+                    gender: doc.gender,
+                    birthday: doc.birthday,
+                    id_: doc._id,
+                    request: {
+                        type: 'GET',
+                        url: 'http://localhost:3000/signUser/' + doc._id
+                    }
+                }
+            })
+        }
+        // if (docs.length >= 0) {
+            res.status(200).json(response);
+        /* } else {
+            res.status(404).json({
+                message: 'No entries found'
+            })
+        }*/
     })
-});*/
+    .catch(err => {
+        console.log(err);
+        res.status(500).json({
+            error: err
+        });
+    });
+});
 
 module.exports = router;
