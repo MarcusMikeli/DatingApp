@@ -54,4 +54,18 @@ event.preventDefault()
 function logout() {
     localStorage.removeItem('activeUser');
 };
+/*
+// LIKE KNAP
+let likebutton = document.getElementById('likebtn');
+likebutton.addEventListener('click', (event) => {
+event.preventDefault()  
+    likeButton()  
+});
 
+function likeButton() {
+    JSON.parse(localStorage.getItem('signUser'))
+    axios.post('http://localhost:3000/userSign/like/')
+    .then(response => {
+        console.log(response)
+    })
+}*/

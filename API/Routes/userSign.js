@@ -168,4 +168,25 @@ router.get('/', (req, res, next) => {
     });
 });
 
+/*router.post('/signUser', (req, res, next) => {
+    userSign.find()
+    .select('_id like')
+    .exec().
+    then(docs => {
+        const response = {
+            count: docs.length,
+            users: docs.map(doc => {
+                return {
+                    id_: doc._id,
+                    like: doc.like,
+                    request: {
+                        type: 'GET',
+                        url: 'http://localhost:3000/signUser/like/' + doc._id
+                    }
+                }
+            })
+        }
+    })
+})*/
+
 module.exports = router;

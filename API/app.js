@@ -15,8 +15,6 @@ mongoose.connect(
     { useNewUrlParser: true },
     () => console.log('Connected to DB!'));
 
-
-
 app.use(morgan('dev'));
 app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.urlencoded({extended: false}));
