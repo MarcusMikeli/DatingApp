@@ -1,3 +1,9 @@
+let cancelbtn = document.getElementById('cancelbtn')
+cancelbtn.addEventListener('click', () => {
+    location.href="frontpage.html"
+})
+
+
 let button = document.getElementById('submitbtn');
 button.addEventListener('click', () => signupButton());
 

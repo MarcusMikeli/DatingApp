@@ -1,0 +1,113 @@
+commit d63dc6daa2c2e6cc6503b647b78fb48da9b5c8ca
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Thu Dec 10 20:54:47 2020 +0100
+
+    Tilføjelse af test
+
+commit 0d5e4405d8df5a2e2af476d11e11e0c5575ab475
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Thu Dec 10 19:55:01 2020 +0100
+
+    slutændringer
+
+commit 17cf5f63a72995bdc6d16372dda77a7f44c4ea06
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Wed Dec 9 11:15:27 2020 +0100
+
+    Forsøg med like/dislike
+
+commit 62b4f368a02bb4676c2b8abcb70c32ee8fb6ee8c
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Tue Dec 8 09:18:22 2020 +0100
+
+    Rykkede server ind i mappe
+
+commit 852a32c3b929a69a4dcc80125deb86c7c79faf86
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Sun Dec 6 00:06:12 2020 +0100
+
+    fungerer
+
+commit 8ab6d0ec356cefeacf6cccc8a367acd57bda24ce
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Thu Dec 3 22:03:38 2020 +0100
+
+    Updatefunktion der fungerer halvt
+
+commit 77a3984127cc6e64562d443d4df99f0a20f60e7d
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Wed Dec 2 11:09:29 2020 +0100
+
+    logout funktion
+
+commit abe44a488948c548b6c799d5d05489bb7620beca
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Tue Dec 1 21:00:59 2020 +0100
+
+    redirect af "create acc"
+
+commit 4342996bc42fa998aea1d59ae9b62c81912d2ade
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Tue Dec 1 11:32:07 2020 +0100
+
+    forsøg på at lave en bio
+
+commit 40b6162425b0b8c28dd339d45d7f505e66f6dbb8
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Tue Dec 1 10:03:34 2020 +0100
+
+    signin/signup - user site
+
+commit abd21001a5bcb296d34ecc5b2d67fea7c009c3a6
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Mon Nov 30 18:00:49 2020 +0100
+
+    login, signup
+
+commit 5af24d86fd8433b212bd571ea603e0a8335389bf
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Mon Nov 30 11:18:25 2020 +0100
+
+    frontend
+
+commit d02f924a9a2470d1a31cea232813b56bd63fddbc
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Sun Nov 29 11:45:16 2020 +0100
+
+    ændringer i diverse routers, models
+
+commit b6f112efb0221283383395fa9b4ba175ba28e64e
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Sat Nov 28 22:52:40 2020 +0100
+
+    login, signup, jwt
+
+commit 444b69f94d60d61f3b1ba3f52e85e09f75bce545
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Sat Nov 28 15:23:49 2020 +0100
+
+    Ændringer i router og models
+
+commit b23617269e4cd7546af722f7ace6581fe2bd8ed9
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Fri Nov 27 13:48:42 2020 +0100
+
+    Ændringer i post, get, patch, delete
+
+commit aef0a554bb3a28f71f6c5aff1182555bd9fff87c
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Fri Nov 27 10:22:34 2020 +0100
+
+    Ændringer i server, routes og api
+
+commit 41a7c2b5f6f9bf77470281f6072500730d4cb9eb
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Thu Nov 26 12:50:45 2020 +0100
+
+    server, API, routes
+
+commit 6ec793a115da5b3a602d6af7be385525c26a44d1
+Author: MarcusMikeli <mikelimarcusolsen@gmail.com>
+Date:   Wed Nov 25 21:27:28 2020 +0100
+
+    npm init
