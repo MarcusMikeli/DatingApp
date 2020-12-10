@@ -26,7 +26,7 @@ function update() {
     let birthday = document.getElementById('user_birthday');
     let gender = document.querySelector('input[name="gender"]:checked');
     let user = JSON.parse(localStorage.getItem('activeUser'));
-    axios.patch('http://localhost:3000/userSign/' + user._id, 
+    axios.put('http://localhost:3000/userSign/' + user._id, 
         { email: email.value,  
         firstName: firstName.value, 
         lastName: lastName.value,

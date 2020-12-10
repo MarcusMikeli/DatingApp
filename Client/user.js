@@ -34,7 +34,9 @@ function deleteButton() {
         console.log(response)
         localStorage.removeItem('activeUser');
         window.location = 'frontpage.html';
-    })
+    }, (error) => {
+        console.log(error)
+    }) 
 }
 
 let editButton = document.getElementById('editbtn');
@@ -68,4 +70,17 @@ function likeButton() {
     .then(response => {
         console.log(response)
     })
+}*/
+/*isAuthenticated()
+
+function isAuthenticated() {
+    const token = localStorage.getItem('token');
+    try {
+        decode(token);
+        if (token < (new Date().getTime() + 1) / 1000) {
+        }
+    } catch (err) {
+        return false;
+    }
+    return window.location='user.html'
 }*/

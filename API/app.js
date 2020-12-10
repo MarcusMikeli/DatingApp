@@ -6,8 +6,7 @@ const mongoose = require('mongoose');
 
 require('dotenv/config');
 
-const userRoutes = require('./Routes/users');
-const matchRoutes = require('./Routes/match');
+// Require userSign routes
 const userSignRoutes = require("./Routes/userSign");
 
 mongoose.connect(
@@ -16,7 +15,7 @@ mongoose.connect(
     () => console.log('Connected to DB!'));
 
 app.use(morgan('dev'));
-app.use('/uploads', express.static('uploads'));
+// app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
@@ -33,8 +32,7 @@ app.use((req, res, next) => {
 });
 
 // Middleweare
-app.use('/users', userRoutes);
-app.use('/match', matchRoutes);
+
 app.use('/userSign', userSignRoutes);
 
 app.use((req, res, next) => {

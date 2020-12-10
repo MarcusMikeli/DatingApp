@@ -99,7 +99,7 @@ router.post('/login', (req, res, next) => {
     });
 })
 
-// DENNE KAN DELETE BRUGER
+// Delete user
 router.delete('/:signUserId', async (req, res, next) => {
     await userSign.findByIdAndDelete(req.params.signUserId)
     .exec()
@@ -116,7 +116,7 @@ router.delete('/:signUserId', async (req, res, next) => {
     });
 });
 
-router.patch('/:id', async (req, res, next) => {
+router.put('/:id', async (req, res, next) => {
     try {
         const id = req.params.id;
         const updates = req.body;
@@ -152,13 +152,7 @@ router.get('/', (req, res, next) => {
                 }
             })
         }
-        // if (docs.length >= 0) {
             res.status(200).json(response);
-        /* } else {
-            res.status(404).json({
-                message: 'No entries found'
-            })
-        }*/
     })
     .catch(err => {
         console.log(err);

@@ -22,7 +22,7 @@ function loginButton() {
     })
 }
 
-function isAuthenticated() {
+/*function isAuthenticated() {
     const token = localStorage.getItem('token');
     try {
       decode(token);
@@ -34,4 +34,4 @@ function isAuthenticated() {
     }
     return window.location='user.html';
   }
-
+*/
